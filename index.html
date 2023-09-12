@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoo Ticket</title>
+    <script src="./main.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Step 1</h2>
+      <div class="d-flex w-50 m-auto pt-5">
+        <form id="zooForm" class="w-100">
+          <div class="mb-3">
+            <label for="numberOfGuest" class="form-label"
+              >Number of Guest</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              min="0"
+              id="numberOfGuest"
+              name="numberOfGuest"
+              required
+            />
+          </div>
+          <div id="ageBox"></div>
+
+          <button
+            type="button"
+            id="submitBtn"
+            value="1"
+            class="btn btn-primary"
+          >
+            Next
+          </button>
+          <button type="button" id="resetBtn" class="btn btn-secondary">
+            Reset
+          </button>
+        </form>
+      </div>
+      <div id="outputBox" class="d-none w-50 m-auto pt-5"></div>
+
+      <h2>Step 2</h2>
+      <div class="d-flex w-50 m-auto pt-5">
+        <form id="searchForm" class="w-100">
+          <div class="mb-3">
+            <label for="ticketNumber" class="form-label">Ticket Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="ticketNumber"
+              required
+            />
+          </div>
+          <button
+            type="button"
+            id="searchBtn"
+            value="1"
+            class="btn btn-primary"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+      <div id="searchResult" class="d-none w-50 m-auto pt-5 flex-column"></div>
+    </div>
+  </body>
+</html>
